@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore India | Travel Guide</title>
+<meta name="description" content="Explore India's beautiful destinations, culture, travel tips and attractions.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#173042;background:#fff}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px #ddd}
+.logo{font-size:23px;font-weight:bold;color:#e87942}
+nav a{margin:0 12px;text-decoration:none;color:#173042;font-weight:bold}
+.hero{min-height:540px;background:linear-gradient(#0006,#0006),url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;display:flex;flex-direction:column;justify-content:center;padding:8%}
+.hero h1{font-size:54px;max-width:650px;margin-bottom:20px}
+.hero p{font-size:20px;margin-bottom:25px}
+button{background:#e87942;color:white;border:0;padding:13px 22px;border-radius:6px;cursor:pointer;font-size:16px}
+.search{margin-top:20px;padding:12px;width:min(450px,100%);border:0;border-radius:6px;font-size:16px}
+section{padding:55px 7%}
+h2{font-size:32px;margin-bottom:15px}
+.intro{color:#667788;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #ddd;background:white}
+.card img{width:100%;height:200px;object-fit:cover}
+.card div{padding:18px}
+.card h3{margin-bottom:10px}
+.card p{color:#657786;line-height:1.5}
+.card button{margin-top:14px}
+.tips{background:#f4f8fb}
+footer{background:#173042;color:white;padding:30px 7%;text-align:center}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🌍 Explore India</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#tips">Travel Tips</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Discover the Incredible India</h1>
+<p>Breathtaking destinations, rich cultures and unforgettable adventures.</p>
+<input class="search" id="search" placeholder="Where do you want to go?">
+<button onclick="searchDestination()">Search Destinations</button>
+</section>
+
+<section id="destinations">
+<h2>Popular Destinations</h2>
+<p class="intro">Explore some of India's most beautiful places.</p>
+<div class="grid" id="destinationGrid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512343873925-21b8d8e4e8d7?auto=format&fit=crop&w=800&q=80">
+<div><h3>Goa</h3><p>Beautiful beaches, vibrant culture and coastal adventures.</p><button onclick="destinationClick('Goa')">Explore Goa</button></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602216056096-3b40ccf3e1f4?auto=format&fit=crop&w=800&q=80">
+<div><h3>Kerala</h3><p>Backwaters, greenery, nature and peaceful landscapes.</p><button onclick="destinationClick('Kerala')">Explore Kerala</button></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f5c4?auto=format&fit=crop&w=800&q=80">
+<div><h3>Jaipur</h3><p>Royal palaces, forts and colourful Rajasthani heritage.</p><button onclick="destinationClick('Jaipur')">Explore Jaipur</button></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1567157577043-0b3d6e9b8b4c?auto=format&fit=crop&w=800&q=80">
+<div><h3>Agra</h3><p>Discover the Taj Mahal and Mughal architecture.</p><button onclick="destinationClick('Agra')">Explore Agra</button></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80">
+<div><h3>Manali</h3><p>Mountain views, adventure and beautiful valleys.</p><button onclick="destinationClick('Manali')">Explore Manali</button></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80">
+<div><h3>Kashmir</h3><p>Scenic lakes, gardens and Himalayan beauty.</p><button onclick="destinationClick('Kashmir')">Explore Kashmir</button></div>
+</div>
+</div>
+</section>
+
+<section class="tips" id="tips">
+<h2>Travel Tips</h2>
+<p class="intro">Make your journey comfortable, safe and memorable.</p>
+<div class="grid">
+<div class="card"><div><h3>Plan Ahead</h3><p>Research your destination, transport and accommodation before travelling.</p></div></div>
+<div class="card"><div><h3>Pack Smart</h3><p>Carry essentials, comfortable clothing and important documents.</p></div></div>
+<div class="card"><div><h3>Travel Safely</h3><p>Keep your belongings secure and follow local safety guidance.</p></div></div>
+</div>
+</section>
+
+<section id="about">
+<h2>About Explore India</h2>
+<p class="intro">Explore India is a travel guide created to help travellers discover India's destinations, history, culture, food and experiences. Find inspiration and useful tips to plan your next journey.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p class="intro">Have a question or travel suggestion? Send us a message.</p>
+<form onsubmit="contactSubmit(event)">
+<input placeholder="Your name" required style="padding:12px;margin:5px;width:250px">
+<input type="email" placeholder="Your email" required style="padding:12px;margin:5px;width:250px">
+<br>
+<textarea placeholder="Your message" required style="padding:12px;margin:5px;width:min(520px,90%);height:100px"></textarea><br>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Explore India | Your Travel Guide</p>
+<p>Discover India. Experience its beauty.</p>
+</footer>
+
+<script>
+function searchDestination(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const cards=document.querySelectorAll('#destinationGrid .card');
+ cards.forEach(card=>card.style.display=card.innerText.toLowerCase().includes(q)?'block':'none');
+ document.getElementById('destinations').scrollIntoView({behavior:'smooth'});
+}
+function destinationClick(name){
+ alert('Explore '+name+'! More travel information coming soon.');
+}
+function contactSubmit(e){
+ e.preventDefault();
+ alert('Thank you! Your message has been submitted.');
+ e.target.reset();
+}
+</script>
+</body>
+</html>
