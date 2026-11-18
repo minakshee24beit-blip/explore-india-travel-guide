@@ -10,13 +10,11 @@ Explore India is a simple, responsive travel guide website that helps travellers
 
 | Homepage | Destinations |
 |---|---|
-| ![Homepage](screenshots/home.png) | ![Destinations](screenshots/destination.png) |
+| ![Homepage](home.png) | ![Destinations](destination.png) |
 
 | GA4 Realtime Overview | Web Stream Details |
 |---|---|
-| ![GA4 Realtime](screenshots/ss2.png) | ![Web Stream](screenshots/ss4.png) |
-
-> Upload the images to a `screenshots/` folder in this repository so they show up here.
+| ![GA4 Realtime](ss2.png) | ![Web Stream](ss4.png) |
 
 ---
 
